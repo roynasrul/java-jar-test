@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.hash.app.Client;
+// import com.google.gson.reflect.TypeToken;
+// import com.hash.app.Client;
 
 /**
  * Hello world!
@@ -33,12 +33,12 @@ public class App {
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
-        Map<String, Object> result = gson.fromJson(response.body(), new TypeToken<Map<String, Object>>() {
-        }.getType());
+        // Map<String, Object> result = gson.fromJson(response.body(), new TypeToken<Map<String, Object>>() {
+        // }.getType());
 
-        Client client = new Client("http://server1.kastela.duckdns.org:3201");
-        Map<String, Object> sendResult = client.secureChannelSend(result.get("credential").toString(),
-                "disyam@hash.id");
-        System.out.println(sendResult);
+        // Client client = new Client("http://server1.kastela.duckdns.org:3201");
+        // Map<String, Object> sendResult = client.secureChannelSend(result.get("credential").toString(),
+        //         "disyam@hash.id");
+        // System.out.println(sendResult);
     }
 }
