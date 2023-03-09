@@ -18,6 +18,6 @@ jobs:
           java-version: '19'
           distribution: 'adopt'
       - name: Publish package
-        run: mvn --batch-mode deploy
+        run: mvn -e -X --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
